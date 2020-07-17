@@ -6,7 +6,7 @@
 //Create an array called rubberDucks with the values "yellow",
 //"red", "blue", "brown" in the array.
 
-//Code here
+const rubberDucks = ['yellow', 'red', 'blue', 'brown']
 
 
 //////////////////PROBLEM 2////////////////////
@@ -16,13 +16,13 @@
 //What is the first numbered index of an array?
 
 // var answer = 1
-// var answer = 0
+var answer = 0
 
 //How do you access the length of an array, such as the array
 //you created above called rubberDucks?
 
 // var arrayLength = Array.length(rubberDucks)
-// var arrayLength = rubberDucks.length
+var arrayLength = rubberDucks.length
 // var arrayLength = rubberDucks.len
 // var arrayLength = rubberDucks.length()
 
@@ -34,7 +34,7 @@
 //parameter: an array, and returns the last element of the array.
 //The passed-in array should NOT be modified.
 
-//Code here
+let getLast = (arr) => arr[arr.length -1]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -44,7 +44,7 @@
 //at the numbered index of that array.
 //The passed-in array should NOT be modified.
 
-//Code here
+let getElement = (arr, ind) => arr[ind]
 
 
 //////////////////PROBLEM 5////////////////////
@@ -54,7 +54,7 @@
 //should change the element at the numbered index of that array
 //to the given value. You do not need to return the array.
 
-//Code here
+let changeElement = (arr, ind, val) => arr[ind] = val
 
 
 //////////////////PROBLEM 6////////////////////
@@ -62,4 +62,7 @@
 //Create a function called trim that takes in an array and removes 
 //the last element. trim should return the array.
 
-//Code here
+let trim = (arr) => {
+    arr.pop()
+    return arr
+}
