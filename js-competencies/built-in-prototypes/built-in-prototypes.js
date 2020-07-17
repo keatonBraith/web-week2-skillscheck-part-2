@@ -9,7 +9,10 @@
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
   
-  //Code here
+const dragonMapper = (arr) => {
+  let newArr = arr.map(element => element + '...here be dragons')
+  return newArr
+}
 
 
 
@@ -20,7 +23,16 @@
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
   
-  //Code here
+let cookieLoversOnly = (arr) => {
+  let array = arr.filter(function(element, index, array){
+    for (let key in element) {
+      if (key === 'favoriteCookie'){
+        return element
+      }
+    }
+  })
+  return array
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -34,7 +46,9 @@
 //Hint: there is an array method for this.
 
 
-  //Code here
+let changeValue = (arr, cb) => {
+  let newArr = arr.forEach(element => cb(element) )
+}
 
 
 
@@ -46,7 +60,10 @@
 //of multiplying all the elements together)
 //Return the product.
   
-  //Code here
+let findProduct = (arr) => {
+  let prod = arr.reduce((acc, curr) => acc * curr)
+  return prod
+}
 
 
 //////////////////PROBLEM 5////////////////////
@@ -63,7 +80,11 @@
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-  //Code here
+let cipherize = (arr, str) => {
+  let index = arr.indexOf(str)
+  let character = str.charAt(index)
+  return character
+}
 
 
 
@@ -74,4 +95,7 @@
 //string. Use built-in methods for taking the string 
 //apart, reversing it, and putting it back together again.
 
-  //Code here
+let reverseMe = (str) => {
+  let newStr = str.slice(-(str.length), 0)
+  return newStr
+}
